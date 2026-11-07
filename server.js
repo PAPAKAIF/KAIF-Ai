@@ -5,7 +5,19 @@ const OpenAI = require("openai");
 
 const app = express();
 app.use(express.json({ limit: "1mb" }));
-app.use(express.static("public"));
+const path = require("path");
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.get("/app.js", (req, res) => {
+  res.sendFile(path.join(__dirname, "app.js"));
+});
+
+app.get("/styles.css", (req, res) => {
+  res.sendFile(path.join(__dirname, "styles.css"));
+});
 app.use("/api/chat", rateLimit({ windowMs: 60_000, limit: 20 }));
 
 const client = process.env.OPENAI_API_KEY
