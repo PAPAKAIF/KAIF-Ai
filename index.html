@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b1b">
+  <meta name="description" content="Kaif AI — your personal AI assistant.">
+  <title>Kaif AI — Your Personal AI Assistant</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#"><span class="brand-mark">K</span><span>Kaif <b>AI</b></span></a>
+      <button class="new-chat" id="newChat">＋ <span>New chat</span></button>
+      <div class="nav-label">MENU</div>
+      <button class="nav-item active">⌂ <span>Home</span></button>
+      <button class="nav-item" id="historyBtn">◷ <span>Chat history</span></button>
+      <div class="nav-label tools-label">EXPLORE</div>
+      <button class="nav-item tool-placeholder">✧ <span>AI tools <small>Coming soon</small></span></button>
+      <button class="nav-item tool-placeholder">▧ <span>Image analysis <small>Coming soon</small></span></button>
+      <button class="nav-item tool-placeholder">▤ <span>PDF assistant <small>Coming soon</small></span></button>
+      <div class="sidebar-bottom">
+        <div class="plan-card"><span>✦</span><div><b>Free plan</b><small>Welcome to Kaif AI</small></div></div>
+        <div class="profile"><div class="avatar">K</div><div><b>Guest user</b><small>Not signed in</small></div></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <span class="mobile-brand"><span class="brand-mark small">K</span> Kaif AI</span>
+        <div class="top-actions"><span class="status-dot"></span><span>AI assistant</span><button class="language">English⌄</button></div>
+      </header>
+
+      <section class="welcome" id="welcome">
+        <div class="orb"><span class="brand-mark big">K</span></div>
+        <div class="eyebrow">YOUR PERSONAL AI ASSISTANT</div>
+        <h1>Ask anything.<br><span>Imagine everything.</span></h1>
+        <p>Learn, create, explore and get things done with Kaif AI.</p>
+        <div class="suggestions">
+          <button class="suggestion" data-prompt="Explain artificial intelligence in simple words.">✧ <span>Explain something</span></button>
+          <button class="suggestion" data-prompt="Help me write a professional email.">✎ <span>Write for me</span></button>
+          <button class="suggestion" data-prompt="Create a 7-day plan to learn a new skill.">▦ <span>Make a plan</span></button>
+          <button class="suggestion" data-prompt="Give me ideas for a small business.">⌁ <span>Brainstorm ideas</span></button>
+        </div>
+      </section>
+
+      <section class="chat-area" id="chatArea" aria-live="polite"></section>
+      <div class="composer-wrap">
+        <form class="composer" id="chatForm">
+          <textarea id="prompt" rows="1" placeholder="Message Kaif AI..." aria-label="Message Kaif AI"></textarea>
+          <div class="composer-bottom"><span class="hint">AI can make mistakes. Check important information.</span><button class="send" id="sendBtn" type="submit" aria-label="Send message">➤</button></div>
+        </form>
+        <div class="footer-note">Kaif AI · Built to help you think, learn and create</div>
+      </div>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
